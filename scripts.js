@@ -5,7 +5,7 @@ function obtenerTemperatura() {
             const temperatura = data.temperatura.toFixed(3);
             document.getElementById('temperature').innerText = `Temperatura: ${temperatura} °C`;
             // Actualiza la barra de progreso de la temperatura
-            const progressTemp = document.querySelector('.progress.temperature');
+            const progressTemp = document.getElementById('.progress.temperature_');
             progressTemp.value = temperatura; // Asume que tienes un máximo definido en tu HTML
         })
         .catch(error => console.error('Error:', error));
