@@ -34,10 +34,10 @@ function read_ram() {
             const progressRam = document.getElementById('ram_');
             progressRam.value = memUsed; // Asume que tienes un máximo definido en tu HTML
         })
-        /*
+        
         .catch(error => {
             console.error('Error al obtener datos de memoria:', error);
-        });*/
+        });
 }
 
 function list_dispositivos(){
