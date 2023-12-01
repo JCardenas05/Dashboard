@@ -12,7 +12,7 @@ function list_dispositivos(){
         fetch('dispositivos.php')
         .then(response => response.json())
         .then(data => {
-            const tabla = document.getElementById('tablaDispositivos').getElementsByTagName('tbody')[0];
+            const tabla = document.getElementById('dispositivos').getElementsByTagName('tbody')[0];
     
             // Vaciar el cuerpo de la tabla por si tiene contenido previo
             tabla.innerHTML = '';
