@@ -48,7 +48,7 @@ function read_ram() {
 function reload_point(){
     fetch('restart_acces.php')
 }
-function reload_point(){
+function reload_server(){
     fetch('restart_server.php')
 }
 

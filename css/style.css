@@ -188,14 +188,9 @@ a.boton {
     transition: .2s ease-in-out;
 }
 
-.export__file .export__file-options label:first-of-type{
-    padding: 1rem 0;
-    background-color: #86e49d !important;
-}
-
 .export__file .export__file-options label:hover{
     transform: scale(1.05);
-    background-color: #fff;
+    background-color: #29bba5;
     cursor: pointer;
 }
 
