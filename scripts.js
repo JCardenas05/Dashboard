@@ -3,7 +3,7 @@ function obtenerTemperatura() {
         .then(response => response.json())
         .then(data => {
             const temperatura = data.temperatura.toFixed(3);
-            document.getElementById('temperatura').innerText = `Temperatura: ${temperatura} °C`;
+            document.getElementById('temperature').innerText = `Temperatura: ${temperatura} °C`;
             // Actualiza la barra de progreso de la temperatura
             const progressTemp = document.querySelector('.progress .temperature');
             progressTemp.value = temperatura; // Asume que tienes un máximo definido en tu HTML
@@ -29,7 +29,7 @@ function read_ram() {
         .then(response => response.json())
         .then(data => {
             const memUsed = data.memUsed.toFixed(3);
-            document.getElementById('used').textContent = `Memoria Utilizada: ${memUsed} MB`;
+            document.getElementById('ram').textContent = `Memoria Utilizada: ${memUsed} MB`;
             // Actualiza la barra de progreso de la RAM
             const progressRam = document.querySelector('.progress .ram');
             progressRam.value = memUsed; // Asume que tienes un máximo definido en tu HTML
