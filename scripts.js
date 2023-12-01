@@ -5,7 +5,7 @@ function obtenerTemperatura() {
             const temperatura = data.temperatura.toFixed(3);
             document.getElementById('temperature').innerText = `Temperatura: ${temperatura} °C`;
             // Actualiza la barra de progreso de la temperatura
-            const progressTemp = document.querySelector('.progress .temperature');
+            const progressTemp = document.querySelector('.progress.temperature');
             progressTemp.value = temperatura; // Asume que tienes un máximo definido en tu HTML
         })
         .catch(error => console.error('Error:', error));
@@ -18,7 +18,7 @@ function obtener_f() {
             const f_cpu = data.f_cpu.toFixed(2);
             document.getElementById('cpu').innerText = `CPU GHz: ${f_cpu} GHz`;
             // Actualiza la barra de progreso de la CPU
-            const progressCpu = document.querySelector('.progress .cpu');
+            const progressCpu = document.querySelector('.progress.cpu');
             progressCpu.value = f_cpu; // Convierte GHz a MHz para la barra de progreso
         })
         .catch(error => console.error('Error:', error));
@@ -31,7 +31,7 @@ function read_ram() {
             const memUsed = data.memUsed.toFixed(3);
             document.getElementById('ram').textContent = `Memoria Utilizada: ${memUsed} MB`;
             // Actualiza la barra de progreso de la RAM
-            const progressRam = document.querySelector('.progress .ram');
+            const progressRam = document.querySelector('.progress.ram');
             progressRam.value = memUsed; // Asume que tienes un máximo definido en tu HTML
         })
         /*
