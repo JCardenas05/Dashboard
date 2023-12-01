@@ -1,5 +1,5 @@
 <?php
-// Comando para reiniciar el punto de acceso, por ejemplo, reiniciar el servicio hostapd
-exec("sudo git pull origin main");
+// Ejecutar el script de shell para actualizar el repositorio git
+exec("sudo /var/www/Dashboard/update_git.sh");
 echo "Punto de acceso reiniciado";
 ?>
