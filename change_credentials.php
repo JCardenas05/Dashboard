@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = escapeshellarg($_POST["password"]);
 
     // Ejecutar el script de shell con los parámetros proporcionados
-    exec("sudo change.sh $ssid $password");
+    exec("sudo ./change.sh $ssid $password");
 
     echo "Configuración actualizada con éxito";
 }
