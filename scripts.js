@@ -38,10 +38,7 @@ function read_ram() {
     fetch('read_ram.php')
         .then(response => response.json())
         .then(data => {
-            // Actualiza los elementos HTML con los datos obtenidos
-            //document.getElementById('total').textContent = 'Memoria Total: ' + data.total_memory_kb + ' KB';
-            //document.getElementById('free').textContent = 'Memoria Libre: ' + data.free_memory_kb + ' KB';
-            document.getElementById('used').textContent = 'Memoria Utilizada: ' + data.used_memory_kb + ' KB';
+            document.getElementById('used').textContent = 'Memoria Utilizada: ' + data.memFree + ' MB';
         })
         .catch(error => {
             console.error('Error al obtener datos de memoria:', error);
