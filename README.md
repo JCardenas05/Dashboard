@@ -30,17 +30,3 @@ git clone https://github.com/JCardenas05/Dashboard
 3. **Utilice el Dashboard**: 
 - Acceda al dashboard siguiendo las instrucciones de la sección 'Uso de la Interfaz'.
 - Realice ajustes y monitorice el estado del enrutador como se describe en la documentación.
-
-## Soporte
-
-Para obtener ayuda o resolver dudas sobre la configuración y el uso del sistema, refiérase a la sección 'Recursos Adicionales y Soporte' en la documentación.
-
-## Contribuciones
-
-Las contribuciones al proyecto son bienvenidas. Por favor, consulte las pautas de contribución antes de hacer un pull request.
-
-## Licencia
-
-Este proyecto está bajo [especificar tipo de licencia] - vea el archivo LICENSE para más detalles.
-
-
