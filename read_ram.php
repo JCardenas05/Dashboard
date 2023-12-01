@@ -25,5 +25,5 @@ foreach ($lines as $line) {
 $memUsed = $memTotal - $memFree;
 
 // Devuelve la memoria utilizada en formato JSON
-echo json_encode(["memUsed" => $memUsed . " kB"]);
+echo json_encode(["memUsed" => $memUsed/1000]);
 ?>
