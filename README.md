@@ -24,7 +24,7 @@ git clone https://github.com/JCardenas05/Dashboard
 
 
 2. **Siga la Guía Paso a Paso**: 
-- Revise cada sección del manual para entender el proceso de configuración de la Raspberry Pi como un enrutador.
+- Revise cada sección del manual de usuario [manual de usuario](Installation_guide.pdf) para entender el proceso de configuración de la Raspberry Pi como un enrutador.
 - Aplique las configuraciones conforme a las instrucciones proporcionadas.
 
 3. **Utilice el Dashboard**: 
