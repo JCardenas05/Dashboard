@@ -18,6 +18,6 @@ foreach ($lines as $line) {
 }
 
 // Devuelve solo la memoria libre en formato JSON
-echo json_encode(["memFree" => $memFree]);
+echo json_encode(["memFree" => $memFree/1000]);
 ?>
 
