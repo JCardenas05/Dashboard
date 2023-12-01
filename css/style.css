@@ -216,6 +216,7 @@ div.buttons {
     border-radius: 12px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
     padding: 5px 5px;
+    margin-top: 15px;
 }
 
 .change form {
