@@ -54,6 +54,19 @@
             </table>
         </div>
 
+        <div class="formulario">
+            <form id="wifiSettingsForm">
+                <label for="ssid">SSID:</label>
+                <input type="text" id="ssid" name="ssid"><br><br>
+            
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password"><br><br>
+            
+                <input type="button" value="Actualizar Configuración" onclick="updateWifiSettings()">
+            </form>
+            <div id="response"></div>          
+        </div>
+
 
 
     </form>
