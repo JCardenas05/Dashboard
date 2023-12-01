@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es"> <!-- Cambiado a 'es' ya que el contenido parece estar en español -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/icon.png" type="image/x-icon">
     <title>DashBoard Raspberry Pi</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js" defer></script> <!-- 'defer' asegura que el script se cargue después del HTML -->
 </head>
+
 <body>
 
-    <h2>DashBoard Raspberry Pi</h2>
-    <div>
-    <!-- Agrega un elemento HTML para mostrar la temperatura -->
-    <p id="temperatura">Temperatura</p>
-    <p id="cpu">CPU</p>
-    <p id="used">RAM</p>
-    </div>
+    <main class="table">
 
-    <div>
-    
-    <section class="table__body">
-    <table id="dispositivos">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>IP</th>
-                <th>MAC</th>
-                <th>Tipo</th>
-                <th>Interfaz</th>
-            </tr>
-        </thead>        
-        <tbody>
-            <!-- Las filas de la tabla se llenarán con JavaScript -->
-        </tbody>
-    </table>
+    <section class="table__header">
+        <h2>DashBoard Raspberry Pi</h2>
+
+        <h3>Estado del Sistema</h3>
+        <p id="temperatura">Temperatura: <span>...</span></p> <!-- Agregado <span> para manipulación específica -->
+        <p id="cpu">CPU: <span>...</span></p>
+        <p id="used">RAM: <span>...</span></p>
+
+        <h3>Dispositivos Conectados</h3>
+        <table id="dispositivos">
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>MAC</th>
+                    <th>Tipo</th>
+                    <th>Interfaz</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de la tabla se llenarán con JavaScript -->
+            </tbody>
+        </table>
     </section>
-    </div>
     
+    </main>
 
 </body>
-</html>
 
+</html>
