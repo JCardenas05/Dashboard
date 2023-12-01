@@ -8,24 +8,21 @@ function obtenerTemperatura() {
 }
 
 function list_dispositivos(){
-        // Hacer una solicitud para obtener los datos de dispositivos
-        fetch('dispositivos.php')
-        .then(response => response.json())
-        .then(data => {
-            const tabla = document.getElementById('dispositivos').getElementsByTagName('tbody')[0];
-    
-            // Vaciar el cuerpo de la tabla por si tiene contenido previo
-            tabla.innerHTML = '';
-    
-            // Iterar sobre cada dispositivo y agregar una fila a la tabla
-            data.forEach(dispositivo => {
-                let fila = tabla.insertRow();
-                fila.insertCell().textContent = dispositivo.ip;
-                fila.insertCell().textContent = dispositivo.mac;
-                fila.insertCell().textContent = dispositivo.type;
-                fila.insertCell().textContent = dispositivo.interface;
-            });
+    fetch('dispositivos.php')
+    .then(response => response.json())
+    .then(data => {
+        const tabla = document.getElementById('tablaDispositivos').getElementsByTagName('tbody')[0];
+        tabla.innerHTML = '';
+
+        data.forEach(dispositivo => {
+            let fila = tabla.insertRow();
+            fila.insertCell().textContent = dispositivo.name;
+            fila.insertCell().textContent = dispositivo.ip;
+            fila.insertCell().textContent = dispositivo.mac;
+            fila.insertCell().textContent = dispositivo.type;
+            fila.insertCell().textContent = dispositivo.interface;
         });
+    });
 }
 
 // Llama a obtenerTemperatura cada 2 segundos
