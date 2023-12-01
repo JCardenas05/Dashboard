@@ -39,6 +39,53 @@ function read_ram() {
         });
 }
 
+function list_dispositivos(){
+    fetch('dispositivos.php')
+    .then(response => response.json())
+    .then(data => {
+        const tabla = document.getElementById('dispositivos').getElementsByTagName('tbody')[0];
+        tabla.innerHTML = '';
+
+        data.forEach(dispositivo => {
+            let fila = tabla.insertRow();
+            fila.insertCell().textContent = dispositivo.name;
+            fila.insertCell().textContent = dispositivo.ip;
+            fila.insertCell().textContent = dispositivo.mac;
+            fila.insertCell().textContent = dispositivo.type;
+            fila.insertCell().textContent = dispositivo.interface;
+        });
+    });
+}
+
+function reload_point(){
+    fetch('restart_acces.php')
+}
+function reload_server(){
+    fetch('restart_server.php')
+}
+
+function updateWifiSettings() {
+    var ssid = document.getElementById("ssid").value;
+    var password = document.getElementById("password").value;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("response").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("POST", "change_credentials.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("ssid=" + ssid + "&password=" + password);
+}
+
+// Llama a obtenerTemperatura cada 2 segundos
+setInterval(obtenerTemperatura, 2000); // 2000 milisegundos = 2 segundos
+setInterval(list_dispositivos,5000);
+setInterval(obtener_f, 2000); 
+setInterval(read_ram,2000)
+
+
 // ... Resto de tu código ...
 
 // Llama a las funciones cada cierto tiempo
