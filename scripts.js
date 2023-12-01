@@ -80,6 +80,10 @@ function updateWifiSettings() {
     xhttp.send("ssid=" + ssid + "&password=" + password);
 }
 
+function update_soft(){
+    fetch('actualizar.php')
+}
+
 // Llama a obtenerTemperatura cada 2 segundos
 setInterval(obtenerTemperatura, 2000); // 2000 milisegundos = 2 segundos
 setInterval(list_dispositivos,5000);

@@ -264,3 +264,18 @@ div.buttons {
 
 /* Estilos para barra progreso*/
 
+button.up{
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.301) url(../img/actualizado.png) center / 70% no-repeat;
+    border-radius: 100%;
+    transition: .2s ease-in-out;
+    height: 5rem;
+    width: 5rem;
+    border: none
+}
+
+button.up:hover { 
+    background-color: #fff;
+    transform: scale(1.15);
+    cursor: pointer;
+}
