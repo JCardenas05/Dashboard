@@ -13,16 +13,21 @@
 
 <body>
 
-    <main class="table">
+    <form id="capitalForm">
 
-    <section class="table__header">
+    <div class="head">
         <h2>DashBoard Raspberry Pi</h2>
+    </div>
 
+    <div class="formulario">
         <h3>Estado del Sistema</h3>
         <p id="temperatura">Temperatura: <span>...</span></p> <!-- Agregado <span> para manipulación específica -->
         <p id="cpu">CPU: <span>...</span></p>
         <p id="used">RAM: <span>...</span></p>
+    
+    </div>
 
+    <div class="formulario">
         <h3>Dispositivos Conectados</h3>
         <table id="dispositivos">
             <thead>
@@ -34,12 +39,11 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Las filas de la tabla se llenarán con JavaScript -->
             </tbody>
         </table>
-    </section>
-    
-    </main>
+    </div>
+
+    </form>
 
 </body>
 
