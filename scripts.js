@@ -48,6 +48,9 @@ function read_ram() {
 function reload_point(){
     fetch('restart_acces.php')
 }
+function reload_point(){
+    fetch('restart_server.php')
+}
 
 // Llama a obtenerTemperatura cada 2 segundos
 setInterval(obtenerTemperatura, 2000); // 2000 milisegundos = 2 segundos
