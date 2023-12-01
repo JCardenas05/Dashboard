@@ -38,7 +38,7 @@ function read_ram() {
     fetch('read_ram.php')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('used').textContent = 'Memoria Utilizada: ' + data.memFree + ' MB';
+            document.getElementById('used').textContent = 'Memoria Utilizada: ' + data.memUsed + ' MB';
         })
         .catch(error => {
             console.error('Error al obtener datos de memoria:', error);

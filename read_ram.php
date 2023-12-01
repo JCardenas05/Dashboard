@@ -7,21 +7,23 @@ $data = file_get_contents('/proc/meminfo');
 // Divide la salida en líneas
 $lines = explode("\n", $data);
 
-// Busca la línea que contiene "MemFree"
+// Inicializa las variables para la memoria total y libre
 $memFree = 0;
 $memTotal = 0;
+
 foreach ($lines as $line) {
     if (strpos($line, 'MemFree:') === 0) {
-        // Extrae el valor numérico de la línea
+        // Extrae el valor numérico de la línea para la memoria libre
         sscanf($line, "MemFree: %d kB", $memFree);
-        break;
-    }
-    if (strpos($line, "MemTotal:" === 0)){
+    } else if (strpos($line, 'MemTotal:') === 0) {
+        // Extrae el valor numérico de la línea para la memoria total
         sscanf($line, "MemTotal: %d kB", $memTotal);
     }
 }
 
-// Devuelve solo la memoria libre en formato JSON
-echo json_encode(["memFree" => ($memTotal-$memFree)/1000]);
-?>
+// Calcula la memoria utilizada
+$memUsed = $memTotal - $memFree;
 
+// Devuelve la memoria utilizada en formato JSON
+echo json_encode(["memUsed" => $memUsed . " kB"]);
+?>
