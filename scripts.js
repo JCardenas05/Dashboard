@@ -45,6 +45,10 @@ function read_ram() {
         });
 }
 
+function reload_point(){
+    fetch('restart_acces.php')
+}
+
 // Llama a obtenerTemperatura cada 2 segundos
 setInterval(obtenerTemperatura, 2000); // 2000 milisegundos = 2 segundos
 setInterval(list_dispositivos,5000);

@@ -29,6 +29,9 @@ form {
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     max-width: 1500px;
+    max-height: 5000px;
+    /* Tamaño definido */
+    height: 100%;
     overflow: auto; /* Barra de desplazamiento */
     /*Centrar el contenedor*/
     margin: 0 auto;
@@ -102,21 +105,107 @@ div{
 
 div.head{
     text-align: center;
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
 }
 
 
 
 a.boton {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
+    color: #ffffff00;
     background-color: #4CAF50;
     border: none;
     border-radius: 15px;
     box-shadow: 5px 5px #999;
+}
+
+.export__file {
+    position: relative;
+    padding: auto;
+}
+
+.export__file .export__file-btn {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.301) url(../img/reiniciar.png) center / 80% no-repeat;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-btn:hover { 
+    background-color: #ffffff00;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.export__file input {
+    display: none;
+}
+
+.export__file .export__file-options {
+    position: absolute;
+    right: 0;
+    
+    width: 12rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    text-align: center;
+
+    opacity: 0;
+    transform: scale(.8);
+    transform-origin: top right;
+    
+    box-shadow: 0 .2rem .5rem #0004;
+    
+    transition: .2s;
+}
+
+.export__file input:checked + .export__file-options {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 100;
+}
+
+.export__file .export__file-options label{
+    display: block;
+    width: 100%;
+    padding: .6rem 0;
+    background-color: #f2f2f2;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-options label:first-of-type{
+    padding: 1rem 0;
+    background-color: #86e49d !important;
+}
+
+.export__file .export__file-options label:hover{
+    transform: scale(1.05);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.export__file .export__file-options img{
+    width: 2rem;
+    height: auto;
+}
+
+
+div.buttons {
+    display: flex;
+    gap: 5px; 
 }

@@ -15,34 +15,46 @@
 
     <form id="capitalForm">
 
-    <div class="head">
-        <h2>DashBoard Raspberry Pi</h2>
-    </div>
+        <div class="head">
+            <h2>DashBoard Raspberry Pi</h2>
+            <div class="buttons">
+                <div class="export__file">
+                    <label for="export-file" class="export__file-btn" title="Export File"></label>
+                    <input type="checkbox" id="export-file" />
+                    <div class="export__file-options">
+                        <label for="export-file" id="toCSV" onclick="reload_point()">Reiniciar router</label>
+                        <label for="export-file" id="toJSON" onclick="exportarJSON()">Reiniciar Server</label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="formulario">
-        <h3>Estado del Sistema</h3>
-        <p id="temperatura">Temperatura: <span>...</span></p> <!-- Agregado <span> para manipulación específica -->
-        <p id="cpu">CPU: <span>...</span></p>
-        <p id="used">RAM: <span>...</span></p>
-    
-    </div>
+        <div class="formulario">
+            <h3>Estado del Sistema</h3>
+            <p id="temperatura">Temperatura: <span>...</span></p> <!-- Agregado <span> para manipulación específica -->
+            <p id="cpu">CPU: <span>...</span></p>
+            <p id="used">RAM: <span>...</span></p>
 
-    <div class="formulario">
-        <h3>Dispositivos Conectados</h3>
-        <table id="dispositivos">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>IP</th>
-                    <th>MAC</th>
-                    <th>Tipo</th>
-                    <th>Interfaz</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
+        </div>
+
+        <div class="formulario">
+            <h3>Dispositivos Conectados</h3>
+            <table id="dispositivos">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>IP</th>
+                        <th>MAC</th>
+                        <th>Tipo</th>
+                        <th>Interfaz</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+
 
     </form>
 
