@@ -28,6 +28,7 @@ $memUsed = $memTotal - $memFree;
 echo json_encode([
     "total_memory_kb" => $memTotal,
     "free_memory_kb" => $memFree,
-    "used_memory_kb" => $memUsed
+    "used_memory_kb" => $memUsed,
+    "data" => $data
 ]);
 ?>
