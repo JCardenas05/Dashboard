@@ -11,7 +11,7 @@ function list_dispositivos(){
     fetch('dispositivos.php')
     .then(response => response.json())
     .then(data => {
-        const tabla = document.getElementById('tablaDispositivos').getElementsByTagName('tbody')[0];
+        const tabla = document.getElementById('dispositivos').getElementsByTagName('tbody')[0];
         tabla.innerHTML = '';
 
         data.forEach(dispositivo => {
