@@ -19,7 +19,7 @@ function obtener_f() {
             document.getElementById('cpu').innerText = `CPU GHz: ${f_cpu} GHz`;
             // Actualiza la barra de progreso de la CPU
             const progressCpu = document.querySelector('.progress .cpu');
-            progressCpu.value = f_cpu * 1000; // Convierte GHz a MHz para la barra de progreso
+            progressCpu.value = f_cpu; // Convierte GHz a MHz para la barra de progreso
         })
         .catch(error => console.error('Error:', error));
 }
@@ -34,9 +34,10 @@ function read_ram() {
             const progressRam = document.querySelector('.progress .ram');
             progressRam.value = memUsed; // Asume que tienes un máximo definido en tu HTML
         })
+        /*
         .catch(error => {
             console.error('Error al obtener datos de memoria:', error);
-        });
+        });*/
 }
 
 function list_dispositivos(){
