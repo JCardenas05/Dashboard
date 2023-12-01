@@ -25,6 +25,15 @@ function list_dispositivos(){
     });
 }
 
+function obtener_f() {
+    fetch('clock_cpu.php')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('cpu').innerText = `CPU GHz: ${data.f_cpu.toFixed(4)} GHz`;
+        })
+        .catch(error => console.error('Error:', error));
+}
+
 // Llama a obtenerTemperatura cada 2 segundos
 setInterval(obtenerTemperatura, 2000); // 2000 milisegundos = 2 segundos
 setInterval(list_dispositivos,5000)
