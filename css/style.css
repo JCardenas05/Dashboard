@@ -204,3 +204,57 @@ div.buttons {
     display: flex;
     gap: 5px; 
 }
+
+
+.change {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente similar a la de iOS */
+    color: #333; /* Color de texto oscuro para una mejor legibilidad */
+    max-width: 300px; /* Ancho máximo para el formulario */
+    margin: auto; /* Centra el formulario en la página */
+    padding: 20px; /* Espaciado interno */
+    background: #f7f7f7; /* Fondo claro */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+}
+
+.change form {
+    display: flex;
+    flex-direction: column; /* Organiza los campos de forma vertical */
+}
+
+.change label {
+    margin-bottom: .5rem; /* Espacio debajo de las etiquetas */
+    font-size: 0.9rem; /* Tamaño de letra para las etiquetas */
+}
+
+.change input[type=text],
+.change input[type=password] {
+    padding: 10px; /* Espaciado interno para los campos de texto */
+    margin-bottom: 1rem; /* Espacio debajo de los campos de texto */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados para los campos de texto */
+    font-size: 1rem; /* Tamaño de letra legible */
+}
+
+.change input[type=button] {
+    padding: 10px;
+    border: none; /* Sin bordes para el botón */
+    border-radius: 8px; /* Bordes redondeados para el botón */
+    background-color: #007aff; /* Color de fondo azul característico de iOS */
+    color: white; /* Texto en blanco para contrastar con el fondo azul */
+    font-size: 1rem; /* Tamaño de letra legible */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.change input[type=button]:hover {
+    background-color: #005ecb; /* Color de fondo más oscuro al pasar el cursor */
+}
+
+#response {
+    margin-top: 1rem; /* Espacio encima del área de respuesta */
+    padding: 10px; /* Espaciado interno para el área de respuesta */
+    background: #e1f5fe; /* Fondo azul claro para el área de respuesta */
+    border-radius: 8px; /* Bordes redondeados para el área de respuesta */
+    font-size: 0.9rem; /* Tamaño de letra para el área de respuesta */
+}
