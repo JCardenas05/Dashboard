@@ -29,15 +29,30 @@ function obtener_f() {
     fetch('clock_cpu.php')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('cpu').innerText = `CPU GHz: ${data.f_cpu.toFixed(4)} GHz`;
+            document.getElementById('cpu').innerText = `CPU GHz: ${data.f_cpu.toFixed(2)} GHz`;
         })
         .catch(error => console.error('Error:', error));
+}
+
+function read_ram() {
+    fetch('read_ram.php')
+        .then(response => response.json())
+        .then(data => {
+            // Actualiza los elementos HTML con los datos obtenidos
+            //document.getElementById('total').textContent = 'Memoria Total: ' + data.total_memory_kb + ' KB';
+            //document.getElementById('free').textContent = 'Memoria Libre: ' + data.free_memory_kb + ' KB';
+            document.getElementById('used').textContent = 'Memoria Utilizada: ' + data.used_memory_kb + ' KB';
+        })
+        .catch(error => {
+            console.error('Error al obtener datos de memoria:', error);
+        });
 }
 
 // Llama a obtenerTemperatura cada 2 segundos
 setInterval(obtenerTemperatura, 2000); // 2000 milisegundos = 2 segundos
 setInterval(list_dispositivos,5000);
 setInterval(obtener_f, 2000); 
+setInterval(read_ram,2000)
 
 
 
