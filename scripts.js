@@ -80,9 +80,23 @@ function updateWifiSettings() {
     xhttp.send("ssid=" + ssid + "&password=" + password);
 }
 
-function update_soft(){
+function update_soft() {
     fetch('actualizar.php')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.text();
+    })
+    .then(data => {
+        console.log('Success:', data);
+        // Aquí puedes hacer algo con la respuesta, por ejemplo, actualizar el DOM
+    })
+    .catch(error => {
+        console.error('Error during fetch:', error);
+    });
 }
+
 
 // Llama a obtenerTemperatura cada 2 segundos
 setInterval(obtenerTemperatura, 2000); // 2000 milisegundos = 2 segundos
@@ -91,9 +105,3 @@ setInterval(obtener_f, 2000);
 setInterval(read_ram,2000)
 
 
-// ... Resto de tu código ...
-
-// Llama a las funciones cada cierto tiempo
-setInterval(obtenerTemperatura, 2000); // 2000 milisegundos = 2 segundos
-setInterval(obtener_f, 2000); 
-setInterval(read_ram, 2000);
