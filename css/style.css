@@ -209,12 +209,13 @@ div.buttons {
 .change {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente similar a la de iOS */
     color: #333; /* Color de texto oscuro para una mejor legibilidad */
-    max-width: 300px; /* Ancho máximo para el formulario */
+    max-width: 100%; /* Ancho máximo para el formulario */
     margin: auto; /* Centra el formulario en la página */
     padding: 20px; /* Espaciado interno */
-    background: #f7f7f7; /* Fondo claro */
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 12px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+    padding: 5px 5px;
 }
 
 .change form {
